@@ -1,4 +1,4 @@
-function mapaCovid(){
+function mapaCovid(urlData){
     var map = new Datamap({
         element: document.getElementById('colombia'),
         scope: 'colombia',
@@ -8,7 +8,7 @@ function mapaCovid(){
         //dataType: 'csv', //for use with dataUrl, currently 'json' or 'csv'. CSV should have an `id` column
         //dataUrl: '', //if not null, datamaps will attempt to fetch this based on dataType ( default: json )
         dataType: 'csv',
-        dataUrl: 'col-data.csv',
+        dataUrl: urlData,
         data: {},
     
         fills: {
@@ -99,4 +99,20 @@ function mapaCovid(){
         }, 1000);
       //$('#exampleModalCenter').modal('show');
     });
+}
+
+function actividadesEcon(){
+  mapaCovid('col-data.csv');
+}
+
+function PIBPreciosCorrientes(){
+  mapaCovid('col-data.csv');
+}
+
+function PIBPorcentaje(){
+  mapaCovid('col-data.csv');
+}
+
+function PIBPerCapital(){
+  mapaCovid('col-data.csv');
 }
