@@ -66,7 +66,6 @@ function mapaColombia(urlData){
             //console.log(data)
           
             var html = '';
-
             if (urlData === 'col-data1.csv') {
               html += '<div class="modal-body"><table class="table text-left"><tbody>';
               html += '<tr><td class="text-secondary">Actividad Economica</td><td class="text-danger">' + (data.act !== undefined ? data.act : 'Sin información') + '</td></tr>';
@@ -266,16 +265,20 @@ function mapaColombia(urlData){
 
 function actividadesEcon(){
   mapaColombia('col-data1.csv');
+  document.getElementById('mapaActual').innerText = 'Mapa - Actividades Economicas';
 }
 
 function PIBPreciosCorrientes(){
   mapaColombia('col-data2.csv');
+  document.getElementById('mapaActual').innerText = 'Mapa - PIB Precios Corrientes';
 }
 
 function PIBPorcentaje(){
   mapaColombia('col-data3.csv');
+  document.getElementById('mapaActual').innerText = 'Mapa - PIB Por Porcentaje';
 }
 
 function PIBPerCapital(){
   mapaColombia('col-data4.csv');
+  document.getElementById('mapaActual').innerText = 'Mapa - PIB Per Capital';
 }
