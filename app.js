@@ -43,7 +43,7 @@ function mapaCovid(urlData){
               '<div class="card-body"><table class="table text-left"><tbody>',
               '<tr><td class="text-secondary">Actividad Economica</td><td class="text-danger">' +  data.act + '</td></tr>',
               '</tbody></table></div></div>'].join('');
-              }else if(urlData == 'col-data2.csv'){
+              }else if(urlData == 'col-data2.csv' || urlData == 'col-data3.csv'){
                 return ['<div class="card" style="padding:0;font-size:">',
               '<h6 class="card-header bg-info">' +  geography.properties.name + '</h6>',
               '<div class="card-body"><table class="table text-left"><tbody>',
@@ -115,7 +115,7 @@ function mapaCovid(urlData){
         if (urlData === 'col-data1.csv') {
           // Actualiza el popupTemplate para col-data1.csv
           html += '<tr><td class="text-secondary">Actividad Economica</td><td class="text-danger">' + data.act + '</td></tr>';
-        } else if (urlData === 'col-data2.csv') {
+        } else if (urlData === 'col-data2.csv' || urlData === 'col-data3.csv') {
           // Actualiza el popupTemplate para col-data2.csv
           html += '<tr><td class="text-secondary">2005</td><td class="text-danger">' + data.a2005 + '</td></tr>' +
                   '<tr><td class="text-secondary">2006: </td><td class="text-dark">' + data.a2006 + '</td></tr>' +
@@ -144,7 +144,7 @@ function PIBPreciosCorrientes(){
 }
 
 function PIBPorcentaje(){
-  mapaCovid('col-data.csv');
+  mapaCovid('col-data3.csv');
 }
 
 function PIBPerCapital(){
