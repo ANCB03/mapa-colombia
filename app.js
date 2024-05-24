@@ -16,10 +16,39 @@ function mapaColombia(urlData){
     
         fills: {
             'def': '#dddddd',
-            'C1': '#ffa4a9',
-            'C2': '#cc6674',
-            'C3': '#993341',
-            'C4': '#66000e',
+            'C1': '#FF5733',
+            'C2': '#FFC300',
+            'C3': '#C70039',
+            'C4': '#900C3F',
+            'C5': '#581845',
+            'C6': '#7D3C98',
+            'C7': '#2874A6',
+            'C8': '#F1C40F',
+            'C9': '#2ECC71',
+            'C10': '#1ABC9C',
+            'C11': '#16A085',
+            'C12': '#27AE60',
+            'C13': '#3498DB',
+            'C14': '#2980B9',
+            'C15': '#8E44AD',
+            'C16': '#9B59B6',
+            'C17': '#34495E',
+            'C18': '#2C3E50',
+            'C19': '#F39C12',
+            'C20': '#E67E22',
+            'C21': '#D35400',
+            'C22': '#BDC3C7',
+            'C23': '#95A5A6',
+            'C24': '#7F8C8D',
+            'C25': '#1F618D',
+            'C26': '#2E86C1',
+            'C27': '#5499C7',
+            'C28': '#7FB3D5',
+            'C29': '#AED6F1',
+            'C30': '#D6EAF8',
+            'C31': '#F8C471',
+            'C32': '#FAD7A0',
+            'C33': '#FDEBD0',
             defaultFill: '#dddddd'
         },
     
@@ -44,36 +73,58 @@ function mapaColombia(urlData){
               html += '</tbody></table></div>';
             } else if (urlData === 'col-data2.csv' || urlData === 'col-data3.csv') {
               html += '<div class="modal-body"><table class="table text-left"><tbody>';
-              html += '<tr><td class="text-secondary">2005</td><td class="text-danger">' + data.a2005 + '</td></tr>';
-              html += '<tr><td class="text-secondary">2006: </td><td class="text-dark">' + data.a2006 + '</td></tr>';
-              html += '<tr><td class="text-secondary">2007: </td><td class="text-success">' + data.a2007 + '</td></tr>';
-              html += '<tr><td class="text-secondary">2008 </td><td class="text-success">' + data.a2008 + '</td></tr>';
-              html += '<tr><td class="text-secondary">2009 </td><td class="text-success">' + data.a2009 + '</td></tr>';
-              html += '<tr><td class="text-secondary">2010 </td><td class="text-success">' + data.a2010 + '</td></tr>';
-              html += '<tr><td class="text-secondary">2011 </td><td class="text-success">' + data.a2011 + '</td></tr>';
-              html += '<tr><td class="text-secondary">2012 </td><td class="text-success">' + data.a2012 + '</td></tr>';
-              html += '<tr><td class="text-secondary">2013 </td><td class="text-success">' + data.a2013 + '</td></tr>';
-              html += '</tbody></table></div>';
+              html += '<tr>';
+              html += '<td class="text-secondary">2005:</td><td class="text-success">' + data.a2005 + '</td>';
+              html += '<td class="text-secondary">2006:</td><td class="text-success">' + data.a2006 + '</td>';
+              html += '<td class="text-secondary">2007:</td><td class="text-success">' + data.a2007 + '</td>';
+              html += '</tr><tr>';
+              html += '<td class="text-secondary">2008:</td><td class="text-success">' + data.a2008 + '</td>';
+              html += '<td class="text-secondary">2009:</td><td class="text-success">' + data.a2009 + '</td>';
+              html += '<td class="text-secondary">2010:</td><td class="text-success">' + data.a2010 + '</td>';
+              html += '</tr><tr>';
+              html += '<td class="text-secondary">2011:</td><td class="text-success">' + data.a2011 + '</td>';
+              html += '<td class="text-secondary">2012:</td><td class="text-success">' + data.a2012 + '</td>';
+              html += '<td class="text-secondary">2013:</td><td class="text-success">' + data.a2013 + '</td>';
+              html += '</tr><tr>';
+              html += '<td class="text-secondary">2014:</td><td class="text-success">' + data.a2014 + '</td>';
+              html += '<td class="text-secondary">2015:</td><td class="text-success">' + data.a2015 + '</td>';
+              html += '<td class="text-secondary">2016:</td><td class="text-success">' + data.a2016 + '</td>';
+              html += '</tr><tr>';
+              html += '<td class="text-secondary">2017:</td><td class="text-success">' + data.a2017 + '</td>';
+              html += '<td class="text-secondary">2018:</td><td class="text-success">' + data.a2018 + '</td>';
+              html += '<td class="text-secondary">2019:</td><td class="text-success">' + data.a2019 + '</td>';
+              html += '</tr><tr>';
+              html += '<td class="text-secondary">2020:</td><td class="text-success">' + data.a2020 + '</td>';
+              html += '<td class="text-secondary">2021:</td><td class="text-success">' + data.a2021 + '</td>';
+              html += '<td class="text-secondary">2022:</td><td class="text-success">' + data.a2022 + '</td>';
+              html += '</tr></tbody></table></div>';
+              
             }else if(urlData === 'col-data4.csv'){
               html += '<div class="modal-body"><table class="table text-left"><tbody>';
-              html += '<tr><td class="text-secondary">2000</td><td class="text-danger">' + data.a2000 + '</td></tr>';
-              html += '<tr><td class="text-secondary">2001: </td><td class="text-dark">' + data.a2001 + '</td></tr>';
-              html += '<tr><td class="text-secondary">2002: </td><td class="text-success">' + data.a2002 + '</td></tr>';
-              html += '<tr><td class="text-secondary">2003 </td><td class="text-success">' + data.a2003 + '</td></tr>';
-              html += '<tr><td class="text-secondary">2004 </td><td class="text-success">' + data.a2004 + '</td></tr>';
-              html += '<tr><td class="text-secondary">2005 </td><td class="text-success">' + data.a2005 + '</td></tr>';
-              html += '<tr><td class="text-secondary">2006 </td><td class="text-success">' + data.a2006 + '</td></tr>';
-              html += '<tr><td class="text-secondary">2007 </td><td class="text-success">' + data.a2007 + '</td></tr>';
-              html += '<tr><td class="text-secondary">2008 </td><td class="text-success">' + data.a2008 + '</td></tr>';
-              html += '<tr><td class="text-secondary">2009 </td><td class="text-success">' + data.a2009 + '</td></tr>';
-              html += '<tr><td class="text-secondary">2010 </td><td class="text-success">' + data.a2010 + '</td></tr>';
-              html += '<tr><td class="text-secondary">2011 </td><td class="text-success">' + data.a2011 + '</td></tr>';
-              html += '<tr><td class="text-secondary">2012 </td><td class="text-success">' + data.a2012 + '</td></tr>';
-              html += '<tr><td class="text-secondary">2013 </td><td class="text-success">' + data.a2013 + '</td></tr>';
-              html += '<tr><td class="text-secondary">2014 </td><td class="text-success">' + data.a2014 + '</td></tr>';
-              html += '<tr><td class="text-secondary">2015 </td><td class="text-success">' + data.a2015 + '</td></tr>';
-              html += '<tr><td class="text-secondary">2016 </td><td class="text-success">' + data.a2016 + '</td></tr>';
-              html += '</tbody></table></div>';
+              html += '<tr>';
+              html += '<td class="text-secondary">2000:</td><td class="text-success">' + data.a2000 + '</td>';
+              html += '<td class="text-secondary">2001:</td><td class="text-success">' + data.a2001 + '</td>';
+              html += '<td class="text-secondary">2002:</td><td class="text-success">' + data.a2002 + '</td>';
+              html += '</tr><tr>';
+              html += '<td class="text-secondary">2003:</td><td class="text-success">' + data.a2003 + '</td>';
+              html += '<td class="text-secondary">2004:</td><td class="text-success">' + data.a2004 + '</td>';
+              html += '<td class="text-secondary">2005:</td><td class="text-success">' + data.a2005 + '</td>';
+              html += '</tr><tr>';
+              html += '<td class="text-secondary">2006:</td><td class="text-success">' + data.a2006 + '</td>';
+              html += '<td class="text-secondary">2007:</td><td class="text-success">' + data.a2007 + '</td>';
+              html += '<td class="text-secondary">2008:</td><td class="text-success">' + data.a2008 + '</td>';
+              html += '</tr><tr>';
+              html += '<td class="text-secondary">2009:</td><td class="text-success">' + data.a2009 + '</td>';
+              html += '<td class="text-secondary">2010:</td><td class="text-success">' + data.a2010 + '</td>';
+              html += '<td class="text-secondary">2011:</td><td class="text-success">' + data.a2011 + '</td>';
+              html += '</tr><tr>';
+              html += '<td class="text-secondary">2012:</td><td class="text-success">' + data.a2012 + '</td>';
+              html += '<td class="text-secondary">2013:</td><td class="text-success">' + data.a2013 + '</td>';
+              html += '<td class="text-secondary">2014:</td><td class="text-success">' + data.a2014 + '</td>';
+              html += '</tr><tr>';
+              html += '<td class="text-secondary">2015:</td><td class="text-success">' + data.a2015 + '</td>';
+              html += '<td class="text-secondary">2016:</td><td class="text-success">' + data.a2016 + '</td>';
+              html += '</tr></tbody></table></div>';
             }
   
             // Update modal content
@@ -139,36 +190,57 @@ function mapaColombia(urlData){
           html += '</tbody></table></div>';
         } else if (urlData === 'col-data2.csv' || urlData === 'col-data3.csv') {
           html += '<div class="modal-body"><table class="table text-left"><tbody>';
-          html += '<tr><td class="text-secondary">2005</td><td class="text-danger">' + data.a2005 + '</td></tr>';
-          html += '<tr><td class="text-secondary">2006: </td><td class="text-dark">' + data.a2006 + '</td></tr>';
-          html += '<tr><td class="text-secondary">2007: </td><td class="text-success">' + data.a2007 + '</td></tr>';
-          html += '<tr><td class="text-secondary">2008 </td><td class="text-success">' + data.a2008 + '</td></tr>';
-          html += '<tr><td class="text-secondary">2009 </td><td class="text-success">' + data.a2009 + '</td></tr>';
-          html += '<tr><td class="text-secondary">2010 </td><td class="text-success">' + data.a2010 + '</td></tr>';
-          html += '<tr><td class="text-secondary">2011 </td><td class="text-success">' + data.a2011 + '</td></tr>';
-          html += '<tr><td class="text-secondary">2012 </td><td class="text-success">' + data.a2012 + '</td></tr>';
-          html += '<tr><td class="text-secondary">2013 </td><td class="text-success">' + data.a2013 + '</td></tr>';
-          html += '</tbody></table></div>';
+          html += '<tr>';
+          html += '<td class="text-secondary">2005:</td><td class="text-success">' + data.a2005 + '</td>';
+          html += '<td class="text-secondary">2006:</td><td class="text-success">' + data.a2006 + '</td>';
+          html += '<td class="text-secondary">2007:</td><td class="text-success">' + data.a2007 + '</td>';
+          html += '</tr><tr>';
+          html += '<td class="text-secondary">2008:</td><td class="text-success">' + data.a2008 + '</td>';
+          html += '<td class="text-secondary">2009:</td><td class="text-success">' + data.a2009 + '</td>';
+          html += '<td class="text-secondary">2010:</td><td class="text-success">' + data.a2010 + '</td>';
+          html += '</tr><tr>';
+          html += '<td class="text-secondary">2011:</td><td class="text-success">' + data.a2011 + '</td>';
+          html += '<td class="text-secondary">2012:</td><td class="text-success">' + data.a2012 + '</td>';
+          html += '<td class="text-secondary">2013:</td><td class="text-success">' + data.a2013 + '</td>';
+          html += '</tr><tr>';
+          html += '<td class="text-secondary">2014:</td><td class="text-success">' + data.a2014 + '</td>';
+          html += '<td class="text-secondary">2015:</td><td class="text-success">' + data.a2015 + '</td>';
+          html += '<td class="text-secondary">2016:</td><td class="text-success">' + data.a2016 + '</td>';
+          html += '</tr><tr>';
+          html += '<td class="text-secondary">2017:</td><td class="text-success">' + data.a2017 + '</td>';
+          html += '<td class="text-secondary">2018:</td><td class="text-success">' + data.a2018 + '</td>';
+          html += '<td class="text-secondary">2019:</td><td class="text-success">' + data.a2019 + '</td>';
+          html += '</tr><tr>';
+          html += '<td class="text-secondary">2020:</td><td class="text-success">' + data.a2020 + '</td>';
+          html += '<td class="text-secondary">2021:</td><td class="text-success">' + data.a2021 + '</td>';
+          html += '<td class="text-secondary">2022:</td><td class="text-success">' + data.a2022 + '</td>';
+          html += '</tr></tbody></table></div>';
         }else if(urlData === 'col-data4.csv'){
           html += '<div class="modal-body"><table class="table text-left"><tbody>';
-          html += '<tr><td class="text-secondary">2000</td><td class="text-danger">' + data.a2000 + '</td></tr>';
-          html += '<tr><td class="text-secondary">2001: </td><td class="text-dark">' + data.a2001 + '</td></tr>';
-          html += '<tr><td class="text-secondary">2002: </td><td class="text-success">' + data.a2002 + '</td></tr>';
-          html += '<tr><td class="text-secondary">2003 </td><td class="text-success">' + data.a2003 + '</td></tr>';
-          html += '<tr><td class="text-secondary">2004 </td><td class="text-success">' + data.a2004 + '</td></tr>';
-          html += '<tr><td class="text-secondary">2005 </td><td class="text-success">' + data.a2005 + '</td></tr>';
-          html += '<tr><td class="text-secondary">2006 </td><td class="text-success">' + data.a2006 + '</td></tr>';
-          html += '<tr><td class="text-secondary">2007 </td><td class="text-success">' + data.a2007 + '</td></tr>';
-          html += '<tr><td class="text-secondary">2008 </td><td class="text-success">' + data.a2008 + '</td></tr>';
-          html += '<tr><td class="text-secondary">2009 </td><td class="text-success">' + data.a2009 + '</td></tr>';
-          html += '<tr><td class="text-secondary">2010 </td><td class="text-success">' + data.a2010 + '</td></tr>';
-          html += '<tr><td class="text-secondary">2011 </td><td class="text-success">' + data.a2011 + '</td></tr>';
-          html += '<tr><td class="text-secondary">2012 </td><td class="text-success">' + data.a2012 + '</td></tr>';
-          html += '<tr><td class="text-secondary">2013 </td><td class="text-success">' + data.a2013 + '</td></tr>';
-          html += '<tr><td class="text-secondary">2014 </td><td class="text-success">' + data.a2014 + '</td></tr>';
-          html += '<tr><td class="text-secondary">2015 </td><td class="text-success">' + data.a2015 + '</td></tr>';
-          html += '<tr><td class="text-secondary">2016 </td><td class="text-success">' + data.a2016 + '</td></tr>';
-          html += '</tbody></table></div>';
+              html += '<tr>';
+              html += '<td class="text-secondary">2000:</td><td class="text-success">' + data.a2000 + '</td>';
+              html += '<td class="text-secondary">2001:</td><td class="text-success">' + data.a2001 + '</td>';
+              html += '<td class="text-secondary">2002:</td><td class="text-success">' + data.a2002 + '</td>';
+              html += '</tr><tr>';
+              html += '<td class="text-secondary">2003:</td><td class="text-success">' + data.a2003 + '</td>';
+              html += '<td class="text-secondary">2004:</td><td class="text-success">' + data.a2004 + '</td>';
+              html += '<td class="text-secondary">2005:</td><td class="text-success">' + data.a2005 + '</td>';
+              html += '</tr><tr>';
+              html += '<td class="text-secondary">2006:</td><td class="text-success">' + data.a2006 + '</td>';
+              html += '<td class="text-secondary">2007:</td><td class="text-success">' + data.a2007 + '</td>';
+              html += '<td class="text-secondary">2008:</td><td class="text-success">' + data.a2008 + '</td>';
+              html += '</tr><tr>';
+              html += '<td class="text-secondary">2009:</td><td class="text-success">' + data.a2009 + '</td>';
+              html += '<td class="text-secondary">2010:</td><td class="text-success">' + data.a2010 + '</td>';
+              html += '<td class="text-secondary">2011:</td><td class="text-success">' + data.a2011 + '</td>';
+              html += '</tr><tr>';
+              html += '<td class="text-secondary">2012:</td><td class="text-success">' + data.a2012 + '</td>';
+              html += '<td class="text-secondary">2013:</td><td class="text-success">' + data.a2013 + '</td>';
+              html += '<td class="text-secondary">2014:</td><td class="text-success">' + data.a2014 + '</td>';
+              html += '</tr><tr>';
+              html += '<td class="text-secondary">2015:</td><td class="text-success">' + data.a2015 + '</td>';
+              html += '<td class="text-secondary">2016:</td><td class="text-success">' + data.a2016 + '</td>';
+              html += '</tr></tbody></table></div>';
         }
 
         // Update modal content

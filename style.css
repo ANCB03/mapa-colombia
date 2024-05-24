@@ -261,3 +261,7 @@ body {
 .modal.fade.show .modal-dialog {
   transform: translateY(0);
 }
+
+.custom-modal-title {
+  color: blue; /* Cambia "blue" por el color deseado */
+}
