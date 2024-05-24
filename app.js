@@ -64,12 +64,15 @@ function mapaColombia(urlData){
             //'<tr><td class="text-secondary">Curados: </td><td class="text-success">' +  data.curados + '</td></tr>',
             //console.log(geography.properties)
             //console.log(data)
-            
+          
             var html = '';
 
             if (urlData === 'col-data1.csv') {
               html += '<div class="modal-body"><table class="table text-left"><tbody>';
               html += '<tr><td class="text-secondary">Actividad Economica</td><td class="text-danger">' + data.act + '</td></tr>';
+              if(geography.id === 'CUN'){
+                html += '<tr><td class="text-secondary">Actividad Economica Bogotá</td><td class="text-danger">' + "*Servicios financieros *Comercio,  *Sector manufacturero" + '</td></tr>';
+              }
               html += '</tbody></table></div>';
             } else if (urlData === 'col-data2.csv' || urlData === 'col-data3.csv') {
               html += '<div class="modal-body"><table class="table text-left"><tbody>';
@@ -183,10 +186,13 @@ function mapaColombia(urlData){
       map.updateChoropleth(dataObject);
       map.options.geographyConfig.popupTemplate = function (geography, data) {
         var html = '';
-
         if (urlData === 'col-data1.csv') {
           html += '<div class="modal-body"><table class="table text-left"><tbody>';
           html += '<tr><td class="text-secondary">Actividad Economica</td><td class="text-danger">' + data.act + '</td></tr>';
+         
+          if(geography.id === 'CUN'){
+            html += '<tr><td class="text-secondary">Actividad Economica Bogotá</td><td class="text-danger">' + "*Servicios financieros *Comercio,  *Sector manufacturero" + '</td></tr>';
+          }
           html += '</tbody></table></div>';
         } else if (urlData === 'col-data2.csv' || urlData === 'col-data3.csv') {
           html += '<div class="modal-body"><table class="table text-left"><tbody>';
