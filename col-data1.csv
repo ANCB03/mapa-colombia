@@ -1,0 +1,24 @@
+id,act,fillKey
+AMA,"*Agricultura *Extracción de madera *Explotación de recursos naturales *Pesca",C4
+ANT,"*Minería *Agricultura", C1
+ARA,"*Agricultura y Ganadería *Petróleo y Gas *Comercio *Transporte y Logística", C1
+ATL,"*Comercio *Puerto *Agricultura",C2
+BOG,"*Servicios financieros *Comercio,  *Sector manufacturero",C4
+BOL,"*Turismo *Comercio *Industria *Agricultura *Pesca",C1
+BOY,"*Agricultura *Ganadería *Minería *Industria",C3
+CAL,"*Agricultura *Industria *Cafetera",C2
+CAQ,"*Agricultura *Ganadería *Minería *Comercio",C4
+CAS,"*Petróleo *Gas *Ganadería Agricultura",C1
+CAU,"*Agricultura *Ganadería *Minería *Industria *Servicios",C1
+CES,"*Agricultura *Ganadería *Minería, servicios*",C2
+CHO,"Minería *Pesca *Agricultura",C4
+COR,"*Agricultura *Ganadería *Pesca",C1
+CUN,"*Agricultura *Comercio *Ganadería *Servicios",C3
+GUA,"*Extracción de recursos naturales *Pesca",C2
+GUV,"*Agricultura y ganadería *Extracción de recursos naturales *Pesca *Servicios públicos y administración",C3
+HUI, "*Agricultura, *Ganadería, *Energía",C1
+GUJ, "*Minería *Agricultura *Ganadería *Comercio *Pesca",C4
+MAG, "*Turismo *Agricultura *Pesca *Comercio",C2
+MET, "*Agricultura *Ganadería *Extracción de petróleo, *Comercio, *Industria, *Servicios",C2
+NAR, "*Agricultura *Ganadería *Pesca",C1
+
