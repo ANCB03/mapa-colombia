@@ -54,6 +54,26 @@ function mapaColombia(urlData){
               html += '<tr><td class="text-secondary">2012 </td><td class="text-success">' + data.a2012 + '</td></tr>';
               html += '<tr><td class="text-secondary">2013 </td><td class="text-success">' + data.a2013 + '</td></tr>';
               html += '</tbody></table></div>';
+            }else if(urlData === 'col-data4.csv'){
+              html += '<div class="modal-body"><table class="table text-left"><tbody>';
+              html += '<tr><td class="text-secondary">2000</td><td class="text-danger">' + data.a2000 + '</td></tr>';
+              html += '<tr><td class="text-secondary">2001: </td><td class="text-dark">' + data.a2001 + '</td></tr>';
+              html += '<tr><td class="text-secondary">2002: </td><td class="text-success">' + data.a2002 + '</td></tr>';
+              html += '<tr><td class="text-secondary">2003 </td><td class="text-success">' + data.a2003 + '</td></tr>';
+              html += '<tr><td class="text-secondary">2004 </td><td class="text-success">' + data.a2004 + '</td></tr>';
+              html += '<tr><td class="text-secondary">2005 </td><td class="text-success">' + data.a2005 + '</td></tr>';
+              html += '<tr><td class="text-secondary">2006 </td><td class="text-success">' + data.a2006 + '</td></tr>';
+              html += '<tr><td class="text-secondary">2007 </td><td class="text-success">' + data.a2007 + '</td></tr>';
+              html += '<tr><td class="text-secondary">2008 </td><td class="text-success">' + data.a2008 + '</td></tr>';
+              html += '<tr><td class="text-secondary">2009 </td><td class="text-success">' + data.a2009 + '</td></tr>';
+              html += '<tr><td class="text-secondary">2010 </td><td class="text-success">' + data.a2010 + '</td></tr>';
+              html += '<tr><td class="text-secondary">2011 </td><td class="text-success">' + data.a2011 + '</td></tr>';
+              html += '<tr><td class="text-secondary">2012 </td><td class="text-success">' + data.a2012 + '</td></tr>';
+              html += '<tr><td class="text-secondary">2013 </td><td class="text-success">' + data.a2013 + '</td></tr>';
+              html += '<tr><td class="text-secondary">2014 </td><td class="text-success">' + data.a2014 + '</td></tr>';
+              html += '<tr><td class="text-secondary">2015 </td><td class="text-success">' + data.a2015 + '</td></tr>';
+              html += '<tr><td class="text-secondary">2016 </td><td class="text-success">' + data.a2016 + '</td></tr>';
+              html += '</tbody></table></div>';
             }
   
             // Update modal content
@@ -128,6 +148,26 @@ function mapaColombia(urlData){
           html += '<tr><td class="text-secondary">2011 </td><td class="text-success">' + data.a2011 + '</td></tr>';
           html += '<tr><td class="text-secondary">2012 </td><td class="text-success">' + data.a2012 + '</td></tr>';
           html += '<tr><td class="text-secondary">2013 </td><td class="text-success">' + data.a2013 + '</td></tr>';
+          html += '</tbody></table></div>';
+        }else if(urlData === 'col-data4.csv'){
+          html += '<div class="modal-body"><table class="table text-left"><tbody>';
+          html += '<tr><td class="text-secondary">2000</td><td class="text-danger">' + data.a2000 + '</td></tr>';
+          html += '<tr><td class="text-secondary">2001: </td><td class="text-dark">' + data.a2001 + '</td></tr>';
+          html += '<tr><td class="text-secondary">2002: </td><td class="text-success">' + data.a2002 + '</td></tr>';
+          html += '<tr><td class="text-secondary">2003 </td><td class="text-success">' + data.a2003 + '</td></tr>';
+          html += '<tr><td class="text-secondary">2004 </td><td class="text-success">' + data.a2004 + '</td></tr>';
+          html += '<tr><td class="text-secondary">2005 </td><td class="text-success">' + data.a2005 + '</td></tr>';
+          html += '<tr><td class="text-secondary">2006 </td><td class="text-success">' + data.a2006 + '</td></tr>';
+          html += '<tr><td class="text-secondary">2007 </td><td class="text-success">' + data.a2007 + '</td></tr>';
+          html += '<tr><td class="text-secondary">2008 </td><td class="text-success">' + data.a2008 + '</td></tr>';
+          html += '<tr><td class="text-secondary">2009 </td><td class="text-success">' + data.a2009 + '</td></tr>';
+          html += '<tr><td class="text-secondary">2010 </td><td class="text-success">' + data.a2010 + '</td></tr>';
+          html += '<tr><td class="text-secondary">2011 </td><td class="text-success">' + data.a2011 + '</td></tr>';
+          html += '<tr><td class="text-secondary">2012 </td><td class="text-success">' + data.a2012 + '</td></tr>';
+          html += '<tr><td class="text-secondary">2013 </td><td class="text-success">' + data.a2013 + '</td></tr>';
+          html += '<tr><td class="text-secondary">2014 </td><td class="text-success">' + data.a2014 + '</td></tr>';
+          html += '<tr><td class="text-secondary">2015 </td><td class="text-success">' + data.a2015 + '</td></tr>';
+          html += '<tr><td class="text-secondary">2016 </td><td class="text-success">' + data.a2016 + '</td></tr>';
           html += '</tbody></table></div>';
         }
 
