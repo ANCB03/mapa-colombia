@@ -69,7 +69,7 @@ function mapaColombia(urlData){
 
             if (urlData === 'col-data1.csv') {
               html += '<div class="modal-body"><table class="table text-left"><tbody>';
-              html += '<tr><td class="text-secondary">Actividad Economica</td><td class="text-danger">' + data.act + '</td></tr>';
+              html += '<tr><td class="text-secondary">Actividad Economica</td><td class="text-danger">' + (data.act !== undefined ? data.act : 'Sin información') + '</td></tr>';
               if(geography.id === 'CUN'){
                 html += '<tr><td class="text-secondary">Actividad Economica Bogotá</td><td class="text-danger">' + "*Servicios financieros *Comercio,  *Sector manufacturero" + '</td></tr>';
               }
@@ -188,7 +188,7 @@ function mapaColombia(urlData){
         var html = '';
         if (urlData === 'col-data1.csv') {
           html += '<div class="modal-body"><table class="table text-left"><tbody>';
-          html += '<tr><td class="text-secondary">Actividad Economica</td><td class="text-danger">' + data.act + '</td></tr>';
+          html += '<tr><td class="text-secondary">Actividad Economica</td><td class="text-danger">' + (data.act !== undefined ? data.act : 'Sin información') + '</td></tr>';
          
           if(geography.id === 'CUN'){
             html += '<tr><td class="text-secondary">Actividad Economica Bogotá</td><td class="text-danger">' + "*Servicios financieros *Comercio,  *Sector manufacturero" + '</td></tr>';

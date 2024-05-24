@@ -93,16 +93,20 @@
             <table class="table">
               <tbody>
                 <tr>
-                  <td class="text-secondary">Actividades Economicas</td>
-                  <td class="text-secondary">PIB Precios Corrientes</td>
-                  <td class="text-secondary">PIB Por Porcentaje</td>
-                  <td class="text-secondary">PIB Per Capital</td>
+                  <td class="text-secondary" style="color: rgb(153, 0, 0);">Actividades Economicas</td>
+                  <td class="text-secondary" style="color: rgb(255, 204, 0);">PIB Precios Corrientes</td>
+                  <td class="text-secondary" style="color: rgb(89, 138, 80);">PIB Por Porcentaje</td>
+                  <td class="text-secondary" style="color: rgb(140, 88, 51);">PIB Per Capital</td>
                 </tr>
                 <tr>
-                  <td class="font-weight-bold"><button class="btn btn-primary" onclick="actividadesEcon()">CLICKEAME!</button></td> 
-                  <td class="font-weight-bold"><button class="btn btn-info" onclick="PIBPreciosCorrientes()">CLICKEAME!</button></td>
-                  <td class="font-weight-bold"><button class="btn btn-info" onclick="PIBPorcentaje()">CLICKEAME!</button></td>
-                  <td class="font-weight-bold"><button class="btn btn-primary" onclick="PIBPerCapital()">CLICKEAME!</button></td>
+                  <td class="font-weight-bold"><button class="btn" style="background-color: rgb(217, 19, 43); color: white;"
+                      onclick="actividadesEcon()">Mostrar Mapa</button></td>
+                  <td class="font-weight-bold"><button class="btn" style="background-color: rgb(207, 142, 35); color: white;"
+                      onclick="PIBPreciosCorrientes()">Mostrar Mapa</button></td>
+                  <td class="font-weight-bold"><button class="btn" style="background-color: rgb(33, 102, 57); color: white;"
+                      onclick="PIBPorcentaje()">Mostrar Mapa</button></td>
+                  <td class="font-weight-bold"><button class="btn" style="background-color: rgb(112, 108, 107); color: white;"
+                      onclick="PIBPerCapital()">Mostrar Mapa</button></td>
                 </tr>
               </tbody>
             </table>
@@ -113,10 +117,8 @@
   <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
       <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title custom-modal-title" id="modalTitle">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+        <div class="modal-header d-flex justify-content-center w-700">
+          <h5 class="modal-title custom-modal-title mx-200" id="modalTitle">Modal title</h5>
           </button>
         </div>
         <div class="modal-body" id="modalBody">
