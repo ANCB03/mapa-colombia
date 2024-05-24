@@ -27,7 +27,11 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #333;
+  background-image: url('https://images2.alphacoders.com/107/1070004.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  
 }
 
 body {
