@@ -1,6 +1,6 @@
 var map;
 
-function mapaCovid(urlData){
+function mapaColombia(urlData){
   if (!map) {
      map = new Datamap({
         element: document.getElementById('colombia'),
@@ -136,17 +136,17 @@ function mapaCovid(urlData){
 }
 
 function actividadesEcon(){
-  mapaCovid('col-data1.csv');
+  mapaColombia('col-data1.csv');
 }
 
 function PIBPreciosCorrientes(){
-  mapaCovid('col-data2.csv');
+  mapaColombia('col-data2.csv');
 }
 
 function PIBPorcentaje(){
-  mapaCovid('col-data3.csv');
+  mapaColombia('col-data3.csv');
 }
 
 function PIBPerCapital(){
-  mapaCovid('col-data.csv');
+  mapaColombia('col-data.csv');
 }
