@@ -36,28 +36,36 @@ function mapaColombia(urlData){
             //console.log(geography.properties)
             //console.log(data)
             
-             console.log(data)
-              if(urlData == 'col-data1.csv'){
-                return ['<div class="card" style="padding:0;font-size:">',
-              '<h6 class="card-header bg-info">' +  geography.properties.name + '</h6>',
-              '<div class="card-body"><table class="table text-left"><tbody>',
-              '<tr><td class="text-secondary">Actividad Economica</td><td class="text-danger">' +  data.act + '</td></tr>',
-              '</tbody></table></div></div>'].join('');
-              }else if(urlData == 'col-data2.csv' || urlData == 'col-data3.csv'){
-                return ['<div class="card" style="padding:0;font-size:">',
-              '<h6 class="card-header bg-info">' +  geography.properties.name + '</h6>',
-              '<div class="card-body"><table class="table text-left"><tbody>',
-              '<tr><td class="text-secondary">2005</td><td class="text-danger">' +  data.a2005 + '</td></tr>',
-              '<tr><td class="text-secondary">2006: </td><td class="text-dark">' +  data.a2006 + '</td></tr>',
-              '<tr><td class="text-secondary">2007: </td><td class="text-success">' +  data.a2007 + '</td></tr>',
-              '<tr><td class="text-secondary">2008 </td><td class="text-success">' +  data.a2008 + '</td></tr>',
-              '<tr><td class="text-secondary">2009 </td><td class="text-success">' +  data.a2009 + '</td></tr>',
-              '<tr><td class="text-secondary">2010 </td><td class="text-success">' +  data.a2010 + '</td></tr>',
-              '<tr><td class="text-secondary">2011 </td><td class="text-success">' +  data.a2011 + '</td></tr>',
-              '<tr><td class="text-secondary">2012 </td><td class="text-success">' +  data.a2012 + '</td></tr>',
-              '<tr><td class="text-secondary">2013 </td><td class="text-success">' +  data.a2013 + '</td></tr>',
-              '</tbody></table></div></div>'].join('');
-              }
+            var html = '';
+
+            if (urlData === 'col-data1.csv') {
+              html += '<div class="modal-body"><table class="table text-left"><tbody>';
+              html += '<tr><td class="text-secondary">Actividad Economica</td><td class="text-danger">' + data.act + '</td></tr>';
+              html += '</tbody></table></div>';
+            } else if (urlData === 'col-data2.csv' || urlData === 'col-data3.csv') {
+              html += '<div class="modal-body"><table class="table text-left"><tbody>';
+              html += '<tr><td class="text-secondary">2005</td><td class="text-danger">' + data.a2005 + '</td></tr>';
+              html += '<tr><td class="text-secondary">2006: </td><td class="text-dark">' + data.a2006 + '</td></tr>';
+              html += '<tr><td class="text-secondary">2007: </td><td class="text-success">' + data.a2007 + '</td></tr>';
+              html += '<tr><td class="text-secondary">2008 </td><td class="text-success">' + data.a2008 + '</td></tr>';
+              html += '<tr><td class="text-secondary">2009 </td><td class="text-success">' + data.a2009 + '</td></tr>';
+              html += '<tr><td class="text-secondary">2010 </td><td class="text-success">' + data.a2010 + '</td></tr>';
+              html += '<tr><td class="text-secondary">2011 </td><td class="text-success">' + data.a2011 + '</td></tr>';
+              html += '<tr><td class="text-secondary">2012 </td><td class="text-success">' + data.a2012 + '</td></tr>';
+              html += '<tr><td class="text-secondary">2013 </td><td class="text-success">' + data.a2013 + '</td></tr>';
+              html += '</tbody></table></div>';
+            }
+  
+            // Update modal content
+            document.getElementById('modalTitle').innerText = geography.properties.name;
+            document.getElementById('modalBody').innerHTML = html;
+  
+            // Show modal
+            setTimeout(function() {
+              $('#infoModal').modal('show');
+            }, 550);
+  
+            return '';
                 
               
             
@@ -96,40 +104,43 @@ function mapaColombia(urlData){
       //$('#exampleModalCenter').modal('show');
     });
   }   else {
-    // Si el mapa ya está inicializado, actualizar los datos
-    d3.csv(urlData, function(newData) {
+    d3.csv(urlData, function (newData) {
       var dataObject = {};
-      // Procesa los nuevos datos y actualiza los valores correspondientes
-      newData.forEach(function(d) {
+      newData.forEach(function (d) {
         dataObject[d.id] = d;
       });
-      // Actualiza el mapa con los nuevos datos
       map.updateChoropleth(dataObject);
-      
-      // Actualiza el popupTemplate para reflejar los nuevos datos
-      map.options.geographyConfig.popupTemplate = function(geography, data) {
-        var html = '<div class="card" style="padding:0;font-size:">' +
-                   '<h6 class="card-header bg-info">' + geography.properties.name + '</h6>' +
-                   '<div class="card-body"><table class="table text-left"><tbody>';
-        
+      map.options.geographyConfig.popupTemplate = function (geography, data) {
+        var html = '';
+
         if (urlData === 'col-data1.csv') {
-          // Actualiza el popupTemplate para col-data1.csv
+          html += '<div class="modal-body"><table class="table text-left"><tbody>';
           html += '<tr><td class="text-secondary">Actividad Economica</td><td class="text-danger">' + data.act + '</td></tr>';
+          html += '</tbody></table></div>';
         } else if (urlData === 'col-data2.csv' || urlData === 'col-data3.csv') {
-          // Actualiza el popupTemplate para col-data2.csv
-          html += '<tr><td class="text-secondary">2005</td><td class="text-danger">' + data.a2005 + '</td></tr>' +
-                  '<tr><td class="text-secondary">2006: </td><td class="text-dark">' + data.a2006 + '</td></tr>' +
-                  '<tr><td class="text-secondary">2007: </td><td class="text-success">' + data.a2007 + '</td></tr>' +
-                  '<tr><td class="text-secondary">2008 </td><td class="text-success">' + data.a2008 + '</td></tr>' +
-                  '<tr><td class="text-secondary">2009 </td><td class="text-success">' + data.a2009 + '</td></tr>' +
-                  '<tr><td class="text-secondary">2010 </td><td class="text-success">' + data.a2010 + '</td></tr>' +
-                  '<tr><td class="text-secondary">2011 </td><td class="text-success">' + data.a2011 + '</td></tr>' +
-                  '<tr><td class="text-secondary">2012 </td><td class="text-success">' + data.a2012 + '</td></tr>' +
-                  '<tr><td class="text-secondary">2013 </td><td class="text-success">' + data.a2013 + '</td></tr>';
+          html += '<div class="modal-body"><table class="table text-left"><tbody>';
+          html += '<tr><td class="text-secondary">2005</td><td class="text-danger">' + data.a2005 + '</td></tr>';
+          html += '<tr><td class="text-secondary">2006: </td><td class="text-dark">' + data.a2006 + '</td></tr>';
+          html += '<tr><td class="text-secondary">2007: </td><td class="text-success">' + data.a2007 + '</td></tr>';
+          html += '<tr><td class="text-secondary">2008 </td><td class="text-success">' + data.a2008 + '</td></tr>';
+          html += '<tr><td class="text-secondary">2009 </td><td class="text-success">' + data.a2009 + '</td></tr>';
+          html += '<tr><td class="text-secondary">2010 </td><td class="text-success">' + data.a2010 + '</td></tr>';
+          html += '<tr><td class="text-secondary">2011 </td><td class="text-success">' + data.a2011 + '</td></tr>';
+          html += '<tr><td class="text-secondary">2012 </td><td class="text-success">' + data.a2012 + '</td></tr>';
+          html += '<tr><td class="text-secondary">2013 </td><td class="text-success">' + data.a2013 + '</td></tr>';
+          html += '</tbody></table></div>';
         }
-        
-        html += '</tbody></table></div></div>';
-        return html;
+
+        // Update modal content
+        document.getElementById('modalTitle').innerText = geography.properties.name;
+        document.getElementById('modalBody').innerHTML = html;
+
+        // Show modal
+        setTimeout(function() {
+          $('#infoModal').modal('show');
+        }, 550);
+
+        return '';
       };
     });
   }
@@ -148,5 +159,5 @@ function PIBPorcentaje(){
 }
 
 function PIBPerCapital(){
-  mapaColombia('col-data.csv');
+  mapaColombia('col-data4.csv');
 }
