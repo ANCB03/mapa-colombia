@@ -21,4 +21,15 @@ GUJ,Minería - Agricultura - Ganadería - Comercio - Pesca,C19
 MAG,TurismoAgricultura - Pesca - Comercio,C20
 MET,Agricultura - Ganadería - Extracción de petróleo - Comercio - Industria - Servicios",C21
 NAR,Agricultura - Ganadería - Pesca,C22
+NSA,Agricultura - Minería - Industria,C10
+PUT,Agricultura - Ganadería - Minería,C12
+QUI,Agricultura - Turismo - Comercio,C13
+RIS,Agricultura - Industria - Comercio,C14
+SAP,Turismo - Pesca - Comercio, C15
+SAN,Agricultura - Ganadería - Industria - Comercio,C16
+SUC,Agricultura - Ganadería - Pesca,C17
+TOL,Agricultura - Ganadería - Industria,C18
+VAC,Industria - Agricultura - Comercio,C19
+VAU,Agricultura - Pesca - Comercio,C20
+VID,Agricultura - Ganadería - Pesca,C21
 
