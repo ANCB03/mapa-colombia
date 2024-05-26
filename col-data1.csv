@@ -1,24 +1,24 @@
 id,act,fillKey
-AMA,"*Agricultura *Extracción de madera *Explotación de recursos naturales *Pesca",C1
-ANT,"*Minería *Agricultura", C2
-ARA,"*Agricultura y Ganadería *Petróleo y Gas *Comercio *Transporte y Logística", C3
-ATL,"*Comercio *Puerto *Agricultura",C4
-BOG,"*Servicios financieros *Comercio,  *Sector manufacturero",C5
-BOL,"*Turismo *Comercio *Industria *Agricultura *Pesca",C6
-BOY,"*Agricultura *Ganadería *Minería *Industria",C7
-CAL,"*Agricultura *Industria *Cafetera",C8
-CAQ,"*Agricultura *Ganadería *Minería *Comercio",C9
-CAS,"*Petróleo *Gas *Ganadería Agricultura",C10
-CAU,"*Agricultura *Ganadería *Minería *Industria *Servicios",C11
-CES,"*Agricultura *Ganadería *Minería, servicios*",C12
-CHO,"Minería *Pesca *Agricultura",C13
-COR,"*Agricultura *Ganadería *Pesca",C14
-CUN,"*Agricultura *Comercio *Ganadería *Servicios",C15
-GUA,"*Extracción de recursos naturales *Pesca",C16
-GUV,"*Agricultura y ganadería *Extracción de recursos naturales *Pesca *Servicios públicos y administración",C17
-HUI, "*Agricultura, *Ganadería, *Energía",C18
-GUJ, "*Minería *Agricultura *Ganadería *Comercio *Pesca",C19
-MAG, "*Turismo *Agricultura *Pesca *Comercio",C20
-MET, "*Agricultura *Ganadería *Extracción de petróleo, *Comercio, *Industria, *Servicios",C21
-NAR, "*Agricultura *Ganadería *Pesca",C22
+AMA, Agricultura - Extracción de madera - Explotación de recursos naturales - Pesca,C1
+ANT,Minería - Agricultura,C8
+ARA,Agricultura y Ganadería - Petróleo y Gas - Comercio - Transporte y Logística,C3
+ATL,Comercio - Puerto - Agricultura,C4
+BOG,Servicios financieros - Comercio - Sector manufacturero,C5
+BOL,Turismo - Comercio - Industria - Agricultura - Pesca,C6
+BOY,Agricultura - Ganadería- Minería - Industria,C7
+CAL,Agricultura - Industria - Cafetera,C8
+CAQ,Agricultura - Ganadería - Minería - Comercio,C9
+CAS,Petróleo - Gas - Ganadería - Agricultura,C10
+CAU,Agricultura - Ganadería - Minería - Industria - Servicios,C11
+CES,Agricultura - Ganadería - Minería - servicios,C12
+CHO,Minería - Pesca - Agricultura,C13
+COR,Agricultura - Ganadería - Pesca,C14
+CUN,Agricultura - Comercio - Ganadería - Servicios,C15
+GUA,Extracción de recursos naturales - Pesca,C16
+GUV,Agricultura y ganadería - Extracción de recursos naturales - Pesca - Servicios públicos y administración,C17
+HUI,Agricultura - Ganadería - Energía,C19
+GUJ,Minería - Agricultura - Ganadería - Comercio - Pesca,C19
+MAG,TurismoAgricultura - Pesca - Comercio,C20
+MET,Agricultura - Ganadería - Extracción de petróleo - Comercio - Industria - Servicios",C21
+NAR,Agricultura - Ganadería - Pesca,C22
 
