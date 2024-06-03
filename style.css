@@ -192,3 +192,10 @@ body {
 .custom-modal-title {
   color: blue; /* Cambia "blue" por el color deseado */
 }
+
+.subtitulo {
+  color: #555555; /* Color del subtítulo gris oscuro */
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 10px; /* Espacio entre el subtítulo y la tabla */
+}

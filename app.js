@@ -68,7 +68,9 @@ function mapaColombia(urlData){
             var html = '';
            
             if(urlData == 'col-data1.csv'){
-              html += '<div class="modal-body"><table class="table text-left"><tbody>';
+              html += '<div class="modal-body">';
+              html += '<div class="subtitulo">Miles de millones de pesos</div>'; // Aquí se añade el subtítulo
+              html += '<table class="table text-left"><tbody>';
               html += '<tr>';
               html += '<td class="text-secondary">2005:</td><td class="text-success">' + data.a2005 + '</td>';
               html += '<td class="text-secondary">2006:</td><td class="text-success">' + data.a2006 + '</td>';
@@ -94,6 +96,7 @@ function mapaColombia(urlData){
               html += '<td class="text-secondary">2021:</td><td class="text-success">' + data.a2021 + '</td>';
               html += '<td class="text-secondary">2022:</td><td class="text-success">' + data.a2022 + '</td>';
               html += '</tr></tbody></table></div>';
+              
 
               // Información adicional
               html += '<div class="bg-primary p-3" >';
@@ -131,8 +134,10 @@ function mapaColombia(urlData){
                 
                 
                 html += '<h5 class="modal-title custom-modal-title" >Bogotá</h5>';
+                html += '<hr>';
+                html += '<div class="subtitulo">Miles de millones de pesos</div>'; // Aquí se añade el subtítulo
                 html += '<table class="table text-left"><tbody>';
-                
+
                 html += '<tr>';
                 html += '<td class="text-secondary">2005:</td><td class="text-success">' + data.a2005 + '</td>';
                 html += '<td class="text-secondary">2006:</td><td class="text-success">' + data.a2006 + '</td>';
@@ -464,7 +469,9 @@ function mapaColombia(urlData){
       map.options.geographyConfig.popupTemplate = function (geography, data) {
         var html = '';
         if(urlData == 'col-data1.csv'){
-          html += '<div class="modal-body"><table class="table text-left"><tbody>';
+          html += '<div class="modal-body">';
+          html += '<div class="subtitulo">Miles de millones de pesos</div>'; // Aquí se añade el subtítulo
+          html += '<table class="table text-left"><tbody>';
           html += '<tr>';
           html += '<td class="text-secondary">2005:</td><td class="text-success">' + data.a2005 + '</td>';
           html += '<td class="text-secondary">2006:</td><td class="text-success">' + data.a2006 + '</td>';
@@ -527,6 +534,8 @@ function mapaColombia(urlData){
             
             
             html += '<h5 class="modal-title custom-modal-title" >Bogotá</h5>';
+            html += '<hr>';
+            html += '<div class="subtitulo">Miles de millones de pesos</div>'; // Aquí se añade el subtítulo
             html += '<table class="table text-left"><tbody>';
             
             html += '<tr>';
