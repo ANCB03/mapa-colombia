@@ -97,7 +97,7 @@ function mapaColombia(urlData){
               html += '<td class="text-secondary">2022:</td><td class="text-success">' + data.a2022 + '</td>';
               html += '</tr></tbody></table></div>';
               
-
+              if(urlData == 'col-data1.csv' ){
               // Información adicional
               html += '<div class="bg-primary p-3" >';
               html += '<p>Producto Interno Bruto por departamento - Base 2015</p>';
@@ -107,6 +107,7 @@ function mapaColombia(urlData){
               html += '</div>';
               
               html += '</div>';
+              }
               
               // -> data 1
               if(geography.id === 'CUN'&&urlData === 'col-data1.csv'){
@@ -505,7 +506,7 @@ function mapaColombia(urlData){
           html += '<td class="text-secondary">2022:</td><td class="text-success">' + data.a2022 + '</td>';
           html += '</tr></tbody></table></div>';
           
-
+          if(urlData == 'col-data1.csv' ){
           // Información adicional
           html += '<div class="bg-primary p-3" >';
           html += '<p>Producto Interno Bruto por departamento - Base 2015</p>';
@@ -515,6 +516,7 @@ function mapaColombia(urlData){
           html += '</div>';
           
           html += '</div>';
+          }
           
           // -> data 1
           if(geography.id === 'CUN'&&urlData === 'col-data1.csv'){
