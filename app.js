@@ -66,14 +66,8 @@ function mapaColombia(urlData){
             //console.log(data)
           
             var html = '';
-            if (urlData === 'col-data1.csv') {
-              html += '<div class="modal-body"><table class="table text-left"><tbody>';
-              html += '<tr><td class="text-secondary">Actividad Economica</td><td class="text-success">' + (data.act !== undefined ? data.act : 'Sin información') + '</td></tr>';
-              if(geography.id === 'CUN'){
-                html += '<tr><td class="text-secondary">Actividad Economica Bogotá</td><td class="text-danger">' + "Servicios financieros - Comercio - Sector manufacturero" + '</td></tr>';
-              }
-              html += '</tbody></table></div>';
-            } else if (urlData === 'col-data2.csv' || urlData === 'col-data3.csv') {
+           
+            if(urlData == 'col-data1.csv'){
               html += '<div class="modal-body"><table class="table text-left"><tbody>';
               html += '<tr>';
               html += '<td class="text-secondary">2005:</td><td class="text-success">' + data.a2005 + '</td>';
@@ -100,27 +94,132 @@ function mapaColombia(urlData){
               html += '<td class="text-secondary">2021:</td><td class="text-success">' + data.a2021 + '</td>';
               html += '<td class="text-secondary">2022:</td><td class="text-success">' + data.a2022 + '</td>';
               html += '</tr></tbody></table></div>';
-              //->  data2
-              if(geography.id === 'CUN'&&urlData === 'col-data2.csv'){
+
+              // Información adicional
+              html += '<div class="bg-primary p-3" >';
+              html += '<p>Producto Interno Bruto por departamento - Base 2015</p>';
+              html += '<p>Agricultura, ganadería, caza, silvicultura y pesca</p>';
+              html += '<p>Valor agregado a precios corrientes</p>';
+              html += '<p>Serie 2005 - 2022p</p>'; 
+              html += '</div>';
+              
+              html += '</div>';
+              
+              // -> data 1
+              if(geography.id === 'CUN'&&urlData === 'col-data1.csv'){
                 var data = {
-                  a2005: 89832,
-                  a2006: 100462,
-                  a2007: 112441,
-                  a2008: 122101,
-                  a2009: 130672,
-                  a2010: 139740,
-                  a2011: 152691,
-                  a2012: 164542,
-                  a2013: 177361,
-                  a2014: 191026,
-                  a2015: 206478,
-                  a2016: 221456,
-                  a2017: 236786,
-                  a2018: 253941,
-                  a2019: 273524,
-                  a2020: 260747,
-                  a2021: 303094,
-                  a2022: 361698
+                  a2005: 9,
+                  a2006: 9,
+                  a2007: 9,
+                  a2008: 9,
+                  a2009: 10,
+                  a2010: 11,
+                  a2011: 11,
+                  a2012: 11,
+                  a2013: 11,
+                  a2014: 12,
+                  a2015: 12,
+                  a2016: 14,
+                  a2017: 13,
+                  a2018: 14,
+                  a2019: 15,
+                  a2020: 16,
+                  a2021: 19,
+                  a2022: 27,
+                  atxt: "Agricultura, ganadería, caza, silvicultura y pesca"
+                }
+                
+                
+                html += '<h5 class="modal-title custom-modal-title" >Bogotá</h5>';
+                html += '<table class="table text-left"><tbody>';
+                
+                html += '<tr>';
+                html += '<td class="text-secondary">2005:</td><td class="text-success">' + data.a2005 + '</td>';
+                html += '<td class="text-secondary">2006:</td><td class="text-success">' + data.a2006 + '</td>';
+                html += '<td class="text-secondary">2007:</td><td class="text-success">' + data.a2007 + '</td>';
+                html += '</tr><tr>';
+                html += '<td class="text-secondary">2008:</td><td class="text-success">' + data.a2008 + '</td>';
+                html += '<td class="text-secondary">2009:</td><td class="text-success">' + data.a2009 + '</td>';
+                html += '<td class="text-secondary">2010:</td><td class="text-success">' + data.a2010 + '</td>';
+                html += '</tr><tr>';
+                html += '<td class="text-secondary">2011:</td><td class="text-success">' + data.a2011 + '</td>';
+                html += '<td class="text-secondary">2012:</td><td class="text-success">' + data.a2012 + '</td>';
+                html += '<td class="text-secondary">2013:</td><td class="text-success">' + data.a2013 + '</td>';
+                html += '</tr><tr>';
+                html += '<td class="text-secondary">2014:</td><td class="text-success">' + data.a2014 + '</td>';
+                html += '<td class="text-secondary">2015:</td><td class="text-success">' + data.a2015 + '</td>';
+                html += '<td class="text-secondary">2016:</td><td class="text-success">' + data.a2016 + '</td>';
+                html += '</tr><tr>';
+                html += '<td class="text-secondary">2017:</td><td class="text-success">' + data.a2017 + '</td>';
+                html += '<td class="text-secondary">2018:</td><td class="text-success">' + data.a2018 + '</td>';
+                html += '<td class="text-secondary">2019:</td><td class="text-success">' + data.a2019 + '</td>';
+                html += '</tr><tr>';
+                html += '<td class="text-secondary">2020:</td><td class="text-success">' + data.a2020 + '</td>';
+                html += '<td class="text-secondary">2021:</td><td class="text-success">' + data.a2021 + '</td>';
+                html += '<td class="text-secondary">2022:</td><td class="text-success">' + data.a2022 + '</td>';
+        
+                html += '</tr>';        
+                html += '</tbody></table></div>';
+
+          
+                
+                document.getElementById('modalBody').innerHTML = html;
+                
+              }
+
+
+
+            }else  if (urlData === 'col-data2.csv' || urlData === 'col-data3.csv' ) {
+              html += '<div class="modal-body"><table class="table text-left"><tbody>';
+              html += '<tr>';
+              html += '<td class="text-secondary">2005:</td><td class="text-success">' + data.a2005 + '</td>';
+              html += '<td class="text-secondary">2006:</td><td class="text-success">' + data.a2006 + '</td>';
+              html += '<td class="text-secondary">2007:</td><td class="text-success">' + data.a2007 + '</td>';
+              html += '</tr><tr>';
+              html += '<td class="text-secondary">2008:</td><td class="text-success">' + data.a2008 + '</td>';
+              html += '<td class="text-secondary">2009:</td><td class="text-success">' + data.a2009 + '</td>';
+              html += '<td class="text-secondary">2010:</td><td class="text-success">' + data.a2010 + '</td>';
+              html += '</tr><tr>';
+              html += '<td class="text-secondary">2011:</td><td class="text-success">' + data.a2011 + '</td>';
+              html += '<td class="text-secondary">2012:</td><td class="text-success">' + data.a2012 + '</td>';
+              html += '<td class="text-secondary">2013:</td><td class="text-success">' + data.a2013 + '</td>';
+              html += '</tr><tr>';
+              html += '<td class="text-secondary">2014:</td><td class="text-success">' + data.a2014 + '</td>';
+              html += '<td class="text-secondary">2015:</td><td class="text-success">' + data.a2015 + '</td>';
+              html += '<td class="text-secondary">2016:</td><td class="text-success">' + data.a2016 + '</td>';
+              html += '</tr><tr>';
+              html += '<td class="text-secondary">2017:</td><td class="text-success">' + data.a2017 + '</td>';
+              html += '<td class="text-secondary">2018:</td><td class="text-success">' + data.a2018 + '</td>';
+              html += '<td class="text-secondary">2019:</td><td class="text-success">' + data.a2019 + '</td>';
+              html += '</tr><tr>';
+              html += '<td class="text-secondary">2020:</td><td class="text-success">' + data.a2020 + '</td>';
+              html += '<td class="text-secondary">2021:</td><td class="text-success">' + data.a2021 + '</td>';
+              html += '<td class="text-secondary">2022:</td><td class="text-success">' + data.a2022 + '</td>';
+              html += '</tr></tbody></table></div>';
+              
+          
+
+              //->  data2
+             if(geography.id === 'CUN'&&urlData === 'col-data2.csv'){
+                var data = {
+                  a2005: 89.832,
+                  a2006: 100.462,
+                  a2007: 112.441,
+                  a2008: 122.101,
+                  a2009: 130.672,
+                  a2010: 139.740,
+                  a2011: 152.691,
+                  a2012: 164.542,
+                  a2013: 177.361,
+                  a2014: 191.026,
+                  a2015: 206.478,
+                  a2016: 221.456,
+                  a2017: 236.786,
+                  a2018: 253.941,
+                  a2019: 273.524,
+                  a2020: 260.747,
+                  a2021: 303.094,
+                  a2022: 361.698
                 }
                 
                 
@@ -161,24 +260,24 @@ function mapaColombia(urlData){
               //data 3
               else if(geography.id === 'CUN'&&urlData === 'col-data3.csv'){
                 var data = {
-                  a2005: 26.6,
-                  a2006: 26.3,
-                  a2007: 26.2,
-                  a2008: 25.6,
-                  a2009: 26.1,
-                  a2010: 25.7,
-                  a2011: 24.7,
-                  a2012: 24.7,
-                  a2013: 24.8,
-                  a2014: 25.0,
-                  a2015: 25.7,
-                  a2016: 25.6,
-                  a2017: 25.7,
-                  a2018: 25.7,
-                  a2019: 25.8,
-                  a2020: 26.1,
-                  a2021: 25.4,
-                  a2022: 24.6
+                  a2005: 26.6+"%",
+                  a2006: 26.3+"%",
+                  a2007: 26.2+"%",
+                  a2008: 25.6+"%",
+                  a2009: 26.1+"%",
+                  a2010: 25.7+"%",
+                  a2011: 24.7+"%",
+                  a2012: 24.7+"%",
+                  a2013: 24.8+"%",
+                  a2014: 25.0+"%",
+                  a2015: 25.7+"%",
+                  a2016: 25.6+"%",
+                  a2017: 25.7+"%",
+                  a2018: 25.7+"%",
+                  a2019: 25.8+"%",
+                  a2020: 26.1+"%",
+                  a2021: 25.4+"%",
+                  a2022: 24.6+"%"
                 }
                 
                 
@@ -315,7 +414,7 @@ function mapaColombia(urlData){
             // Show modal
             setTimeout(function() {
               $('#infoModal').modal('show');
-            }, 550);
+            }, 3000);
   
             return '';
                 
@@ -364,15 +463,7 @@ function mapaColombia(urlData){
       map.updateChoropleth(dataObject);
       map.options.geographyConfig.popupTemplate = function (geography, data) {
         var html = '';
-        if (urlData === 'col-data1.csv') {
-          html += '<div class="modal-body"><table class="table text-left"><tbody>';
-          html += '<tr><td class="text-secondary">Actividad Economica</td><td class="text-danger">' + (data.act !== undefined ? data.act : 'Sin información') + '</td></tr>';
-         
-          if(geography.id === 'CUN'){
-            html += '<tr><td class="text-secondary">Actividad Economica Bogotá</td><td class="text-danger">' + "*Servicios financieros *Comercio,  *Sector manufacturero" + '</td></tr>';
-          }
-          html += '</tbody></table></div>';
-        } else if (urlData === 'col-data2.csv' || urlData === 'col-data3.csv') {
+        if(urlData == 'col-data1.csv'){
           html += '<div class="modal-body"><table class="table text-left"><tbody>';
           html += '<tr>';
           html += '<td class="text-secondary">2005:</td><td class="text-success">' + data.a2005 + '</td>';
@@ -400,124 +491,227 @@ function mapaColombia(urlData){
           html += '<td class="text-secondary">2022:</td><td class="text-success">' + data.a2022 + '</td>';
           html += '</tr></tbody></table></div>';
 
-           if(geography.id === 'CUN'&&urlData === 'col-data2.csv'){
-                var data = {
-                  a2005: 89832,
-                  a2006: 100462,
-                  a2007: 112441,
-                  a2008: 122101,
-                  a2009: 130672,
-                  a2010: 139740,
-                  a2011: 152691,
-                  a2012: 164542,
-                  a2013: 177361,
-                  a2014: 191026,
-                  a2015: 206478,
-                  a2016: 221456,
-                  a2017: 236786,
-                  a2018: 253941,
-                  a2019: 273524,
-                  a2020: 260747,
-                  a2021: 303094,
-                  a2022: 361698
-                }
-                
-                
-                html += '<h5 class="modal-title custom-modal-title" >Bogotá</h5>';
-                html += '<table class="table text-left"><tbody>';
-                
-                html += '<tr>';
-                html += '<td class="text-secondary">2005:</td><td class="text-success">' + data.a2005 + '</td>';
-                html += '<td class="text-secondary">2006:</td><td class="text-success">' + data.a2006 + '</td>';
-                html += '<td class="text-secondary">2007:</td><td class="text-success">' + data.a2007 + '</td>';
-                html += '</tr><tr>';
-                html += '<td class="text-secondary">2008:</td><td class="text-success">' + data.a2008 + '</td>';
-                html += '<td class="text-secondary">2009:</td><td class="text-success">' + data.a2009 + '</td>';
-                html += '<td class="text-secondary">2010:</td><td class="text-success">' + data.a2010 + '</td>';
-                html += '</tr><tr>';
-                html += '<td class="text-secondary">2011:</td><td class="text-success">' + data.a2011 + '</td>';
-                html += '<td class="text-secondary">2012:</td><td class="text-success">' + data.a2012 + '</td>';
-                html += '<td class="text-secondary">2013:</td><td class="text-success">' + data.a2013 + '</td>';
-                html += '</tr><tr>';
-                html += '<td class="text-secondary">2014:</td><td class="text-success">' + data.a2014 + '</td>';
-                html += '<td class="text-secondary">2015:</td><td class="text-success">' + data.a2015 + '</td>';
-                html += '<td class="text-secondary">2016:</td><td class="text-success">' + data.a2016 + '</td>';
-                html += '</tr><tr>';
-                html += '<td class="text-secondary">2017:</td><td class="text-success">' + data.a2017 + '</td>';
-                html += '<td class="text-secondary">2018:</td><td class="text-success">' + data.a2018 + '</td>';
-                html += '<td class="text-secondary">2019:</td><td class="text-success">' + data.a2019 + '</td>';
-                html += '</tr><tr>';
-                html += '<td class="text-secondary">2020:</td><td class="text-success">' + data.a2020 + '</td>';
-                html += '<td class="text-secondary">2021:</td><td class="text-success">' + data.a2021 + '</td>';
-                html += '<td class="text-secondary">2022:</td><td class="text-success">' + data.a2022 + '</td>';
-                html += '</tr>';
-                
-                html += '</tbody></table></div>';
-                
-                document.getElementById('modalBody').innerHTML = html;
-                
-              } 
-              //data 3
-              else if(geography.id === 'CUN'&&urlData === 'col-data3.csv'){
-                var data = {
-                  a2005: 26.6,
-                  a2006: 26.3,
-                  a2007: 26.2,
-                  a2008: 25.6,
-                  a2009: 26.1,
-                  a2010: 25.7,
-                  a2011: 24.7,
-                  a2012: 24.7,
-                  a2013: 24.8,
-                  a2014: 25.0,
-                  a2015: 25.7,
-                  a2016: 25.6,
-                  a2017: 25.7,
-                  a2018: 25.7,
-                  a2019: 25.8,
-                  a2020: 26.1,
-                  a2021: 25.4,
-                  a2022: 24.6
-                }
-                
-                
-                html += '<h5 class="modal-title custom-modal-title" >Bogotá</h5>';
-                html += '<table class="table text-left"><tbody>';
-                
-                html += '<tr>';
-                html += '<td class="text-secondary">2005:</td><td class="text-success">' + data.a2005 + '</td>';
-                html += '<td class="text-secondary">2006:</td><td class="text-success">' + data.a2006 + '</td>';
-                html += '<td class="text-secondary">2007:</td><td class="text-success">' + data.a2007 + '</td>';
-                html += '</tr><tr>';
-                html += '<td class="text-secondary">2008:</td><td class="text-success">' + data.a2008 + '</td>';
-                html += '<td class="text-secondary">2009:</td><td class="text-success">' + data.a2009 + '</td>';
-                html += '<td class="text-secondary">2010:</td><td class="text-success">' + data.a2010 + '</td>';
-                html += '</tr><tr>';
-                html += '<td class="text-secondary">2011:</td><td class="text-success">' + data.a2011 + '</td>';
-                html += '<td class="text-secondary">2012:</td><td class="text-success">' + data.a2012 + '</td>';
-                html += '<td class="text-secondary">2013:</td><td class="text-success">' + data.a2013 + '</td>';
-                html += '</tr><tr>';
-                html += '<td class="text-secondary">2014:</td><td class="text-success">' + data.a2014 + '</td>';
-                html += '<td class="text-secondary">2015:</td><td class="text-success">' + data.a2015 + '</td>';
-                html += '<td class="text-secondary">2016:</td><td class="text-success">' + data.a2016 + '</td>';
-                html += '</tr><tr>';
-                html += '<td class="text-secondary">2017:</td><td class="text-success">' + data.a2017 + '</td>';
-                html += '<td class="text-secondary">2018:</td><td class="text-success">' + data.a2018 + '</td>';
-                html += '<td class="text-secondary">2019:</td><td class="text-success">' + data.a2019 + '</td>';
-                html += '</tr><tr>';
-                html += '<td class="text-secondary">2020:</td><td class="text-success">' + data.a2020 + '</td>';
-                html += '<td class="text-secondary">2021:</td><td class="text-success">' + data.a2021 + '</td>';
-                html += '<td class="text-secondary">2022:</td><td class="text-success">' + data.a2022 + '</td>';
-                html += '</tr>';
-                
-                html += '</tbody></table></div>';
-                
-                document.getElementById('modalBody').innerHTML = html;
-                
-              }
+          // Información adicional
+          html += '<div class="bg-primary p-3" >';
+          html += '<p>Producto Interno Bruto por departamento - Base 2015</p>';
+          html += '<p>Agricultura, ganadería, caza, silvicultura y pesca</p>';
+          html += '<p>Valor agregado a precios corrientes</p>';
+          html += '<p>Serie 2005 - 2022p</p>'; 
+          html += '</div>';
+          
+          html += '</div>';
+          
+          // -> data 1
+          if(geography.id === 'CUN'&&urlData === 'col-data1.csv'){
+            var data = {
+              a2005: 9,
+              a2006: 9,
+              a2007: 9,
+              a2008: 9,
+              a2009: 10,
+              a2010: 11,
+              a2011: 11,
+              a2012: 11,
+              a2013: 11,
+              a2014: 12,
+              a2015: 12,
+              a2016: 14,
+              a2017: 13,
+              a2018: 14,
+              a2019: 15,
+              a2020: 16,
+              a2021: 19,
+              a2022: 27,
+              atxt: "Agricultura, ganadería, caza, silvicultura y pesca"
+            }
+            
+            
+            html += '<h5 class="modal-title custom-modal-title" >Bogotá</h5>';
+            html += '<table class="table text-left"><tbody>';
+            
+            html += '<tr>';
+            html += '<td class="text-secondary">2005:</td><td class="text-success">' + data.a2005 + '</td>';
+            html += '<td class="text-secondary">2006:</td><td class="text-success">' + data.a2006 + '</td>';
+            html += '<td class="text-secondary">2007:</td><td class="text-success">' + data.a2007 + '</td>';
+            html += '</tr><tr>';
+            html += '<td class="text-secondary">2008:</td><td class="text-success">' + data.a2008 + '</td>';
+            html += '<td class="text-secondary">2009:</td><td class="text-success">' + data.a2009 + '</td>';
+            html += '<td class="text-secondary">2010:</td><td class="text-success">' + data.a2010 + '</td>';
+            html += '</tr><tr>';
+            html += '<td class="text-secondary">2011:</td><td class="text-success">' + data.a2011 + '</td>';
+            html += '<td class="text-secondary">2012:</td><td class="text-success">' + data.a2012 + '</td>';
+            html += '<td class="text-secondary">2013:</td><td class="text-success">' + data.a2013 + '</td>';
+            html += '</tr><tr>';
+            html += '<td class="text-secondary">2014:</td><td class="text-success">' + data.a2014 + '</td>';
+            html += '<td class="text-secondary">2015:</td><td class="text-success">' + data.a2015 + '</td>';
+            html += '<td class="text-secondary">2016:</td><td class="text-success">' + data.a2016 + '</td>';
+            html += '</tr><tr>';
+            html += '<td class="text-secondary">2017:</td><td class="text-success">' + data.a2017 + '</td>';
+            html += '<td class="text-secondary">2018:</td><td class="text-success">' + data.a2018 + '</td>';
+            html += '<td class="text-secondary">2019:</td><td class="text-success">' + data.a2019 + '</td>';
+            html += '</tr><tr>';
+            html += '<td class="text-secondary">2020:</td><td class="text-success">' + data.a2020 + '</td>';
+            html += '<td class="text-secondary">2021:</td><td class="text-success">' + data.a2021 + '</td>';
+            html += '<td class="text-secondary">2022:</td><td class="text-success">' + data.a2022 + '</td>';
+    
+            html += '</tr>';        
+            html += '</tbody></table></div>';
+
+      
+            
+            document.getElementById('modalBody').innerHTML = html;
+            
+          }
 
 
 
+        }else  if (urlData === 'col-data2.csv' || urlData === 'col-data3.csv' ) {
+          html += '<div class="modal-body"><table class="table text-left"><tbody>';
+          html += '<tr>';
+          html += '<td class="text-secondary">2005:</td><td class="text-success">' + data.a2005 + '</td>';
+          html += '<td class="text-secondary">2006:</td><td class="text-success">' + data.a2006 + '</td>';
+          html += '<td class="text-secondary">2007:</td><td class="text-success">' + data.a2007 + '</td>';
+          html += '</tr><tr>';
+          html += '<td class="text-secondary">2008:</td><td class="text-success">' + data.a2008 + '</td>';
+          html += '<td class="text-secondary">2009:</td><td class="text-success">' + data.a2009 + '</td>';
+          html += '<td class="text-secondary">2010:</td><td class="text-success">' + data.a2010 + '</td>';
+          html += '</tr><tr>';
+          html += '<td class="text-secondary">2011:</td><td class="text-success">' + data.a2011 + '</td>';
+          html += '<td class="text-secondary">2012:</td><td class="text-success">' + data.a2012 + '</td>';
+          html += '<td class="text-secondary">2013:</td><td class="text-success">' + data.a2013 + '</td>';
+          html += '</tr><tr>';
+          html += '<td class="text-secondary">2014:</td><td class="text-success">' + data.a2014 + '</td>';
+          html += '<td class="text-secondary">2015:</td><td class="text-success">' + data.a2015 + '</td>';
+          html += '<td class="text-secondary">2016:</td><td class="text-success">' + data.a2016 + '</td>';
+          html += '</tr><tr>';
+          html += '<td class="text-secondary">2017:</td><td class="text-success">' + data.a2017 + '</td>';
+          html += '<td class="text-secondary">2018:</td><td class="text-success">' + data.a2018 + '</td>';
+          html += '<td class="text-secondary">2019:</td><td class="text-success">' + data.a2019 + '</td>';
+          html += '</tr><tr>';
+          html += '<td class="text-secondary">2020:</td><td class="text-success">' + data.a2020 + '</td>';
+          html += '<td class="text-secondary">2021:</td><td class="text-success">' + data.a2021 + '</td>';
+          html += '<td class="text-secondary">2022:</td><td class="text-success">' + data.a2022 + '</td>';
+          html += '</tr></tbody></table></div>';
+          
+      
+
+          //->  data2
+         if(geography.id === 'CUN'&&urlData === 'col-data2.csv'){
+            var data = {
+              a2005: 89.832,
+              a2006: 100.462,
+              a2007: 112.441,
+              a2008: 122.101,
+              a2009: 130.672,
+              a2010: 139.740,
+              a2011: 152.691,
+              a2012: 164.542,
+              a2013: 177.361,
+              a2014: 191.026,
+              a2015: 206.478,
+              a2016: 221.456,
+              a2017: 236.786,
+              a2018: 253.941,
+              a2019: 273.524,
+              a2020: 260.747,
+              a2021: 303.094,
+              a2022: 361.698
+            }
+            
+            
+            html += '<h5 class="modal-title custom-modal-title" >Bogotá</h5>';
+            html += '<table class="table text-left"><tbody>';
+            
+            html += '<tr>';
+            html += '<td class="text-secondary">2005:</td><td class="text-success">' + data.a2005 + '</td>';
+            html += '<td class="text-secondary">2006:</td><td class="text-success">' + data.a2006 + '</td>';
+            html += '<td class="text-secondary">2007:</td><td class="text-success">' + data.a2007 + '</td>';
+            html += '</tr><tr>';
+            html += '<td class="text-secondary">2008:</td><td class="text-success">' + data.a2008 + '</td>';
+            html += '<td class="text-secondary">2009:</td><td class="text-success">' + data.a2009 + '</td>';
+            html += '<td class="text-secondary">2010:</td><td class="text-success">' + data.a2010 + '</td>';
+            html += '</tr><tr>';
+            html += '<td class="text-secondary">2011:</td><td class="text-success">' + data.a2011 + '</td>';
+            html += '<td class="text-secondary">2012:</td><td class="text-success">' + data.a2012 + '</td>';
+            html += '<td class="text-secondary">2013:</td><td class="text-success">' + data.a2013 + '</td>';
+            html += '</tr><tr>';
+            html += '<td class="text-secondary">2014:</td><td class="text-success">' + data.a2014 + '</td>';
+            html += '<td class="text-secondary">2015:</td><td class="text-success">' + data.a2015 + '</td>';
+            html += '<td class="text-secondary">2016:</td><td class="text-success">' + data.a2016 + '</td>';
+            html += '</tr><tr>';
+            html += '<td class="text-secondary">2017:</td><td class="text-success">' + data.a2017 + '</td>';
+            html += '<td class="text-secondary">2018:</td><td class="text-success">' + data.a2018 + '</td>';
+            html += '<td class="text-secondary">2019:</td><td class="text-success">' + data.a2019 + '</td>';
+            html += '</tr><tr>';
+            html += '<td class="text-secondary">2020:</td><td class="text-success">' + data.a2020 + '</td>';
+            html += '<td class="text-secondary">2021:</td><td class="text-success">' + data.a2021 + '</td>';
+            html += '<td class="text-secondary">2022:</td><td class="text-success">' + data.a2022 + '</td>';
+            html += '</tr>';
+            
+            html += '</tbody></table></div>';
+            
+            document.getElementById('modalBody').innerHTML = html;
+            
+          } 
+          //data 3
+          else if(geography.id === 'CUN'&&urlData === 'col-data3.csv'){
+            var data = {
+              a2005: 26.6+"%",
+              a2006: 26.3+"%",
+              a2007: 26.2+"%",
+              a2008: 25.6+"%",
+              a2009: 26.1+"%",
+              a2010: 25.7+"%",
+              a2011: 24.7+"%",
+              a2012: 24.7+"%",
+              a2013: 24.8+"%",
+              a2014: 25.0+"%",
+              a2015: 25.7+"%",
+              a2016: 25.6+"%",
+              a2017: 25.7+"%",
+              a2018: 25.7+"%",
+              a2019: 25.8+"%",
+              a2020: 26.1+"%",
+              a2021: 25.4+"%",
+              a2022: 24.6+"%"
+            }
+            
+            
+            html += '<h5 class="modal-title custom-modal-title" >Bogotá</h5>';
+            html += '<table class="table text-left"><tbody>';
+            
+            html += '<tr>';
+            html += '<td class="text-secondary">2005:</td><td class="text-success">' + data.a2005 + '</td>';
+            html += '<td class="text-secondary">2006:</td><td class="text-success">' + data.a2006 + '</td>';
+            html += '<td class="text-secondary">2007:</td><td class="text-success">' + data.a2007 + '</td>';
+            html += '</tr><tr>';
+            html += '<td class="text-secondary">2008:</td><td class="text-success">' + data.a2008 + '</td>';
+            html += '<td class="text-secondary">2009:</td><td class="text-success">' + data.a2009 + '</td>';
+            html += '<td class="text-secondary">2010:</td><td class="text-success">' + data.a2010 + '</td>';
+            html += '</tr><tr>';
+            html += '<td class="text-secondary">2011:</td><td class="text-success">' + data.a2011 + '</td>';
+            html += '<td class="text-secondary">2012:</td><td class="text-success">' + data.a2012 + '</td>';
+            html += '<td class="text-secondary">2013:</td><td class="text-success">' + data.a2013 + '</td>';
+            html += '</tr><tr>';
+            html += '<td class="text-secondary">2014:</td><td class="text-success">' + data.a2014 + '</td>';
+            html += '<td class="text-secondary">2015:</td><td class="text-success">' + data.a2015 + '</td>';
+            html += '<td class="text-secondary">2016:</td><td class="text-success">' + data.a2016 + '</td>';
+            html += '</tr><tr>';
+            html += '<td class="text-secondary">2017:</td><td class="text-success">' + data.a2017 + '</td>';
+            html += '<td class="text-secondary">2018:</td><td class="text-success">' + data.a2018 + '</td>';
+            html += '<td class="text-secondary">2019:</td><td class="text-success">' + data.a2019 + '</td>';
+            html += '</tr><tr>';
+            html += '<td class="text-secondary">2020:</td><td class="text-success">' + data.a2020 + '</td>';
+            html += '<td class="text-secondary">2021:</td><td class="text-success">' + data.a2021 + '</td>';
+            html += '<td class="text-secondary">2022:</td><td class="text-success">' + data.a2022 + '</td>';
+            html += '</tr>';
+            
+            html += '</tbody></table></div>';
+            
+            document.getElementById('modalBody').innerHTML = html;
+            
+          }
+          
         }else if(urlData === 'col-data4.csv'){
           html += '<div class="modal-body"><table class="table text-left"><tbody>';
               html += '<tr>';
@@ -619,13 +813,30 @@ function mapaColombia(urlData){
         // Show modal
         setTimeout(function() {
           $('#infoModal').modal('show');
-        }, 550);
+        }, 3000);
 
         return '';
       };
     });
   }
 }
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Function to simulate loading completion
+  function hideLoader() {
+    document.body.classList.add('loaded');
+  }
+
+  // Simulate loading process, you can replace this with actual loading logic
+  setTimeout(hideLoader, 100000000); // Hide loader after 5 seconds
+
+  // Add event listeners to your buttons to hide the loader immediately
+  document.querySelectorAll('button').forEach(button => {
+    button.addEventListener('click', hideLoader);
+  });
+});
+
 
 function actividadesEcon(){
   mapaColombia('col-data1.csv');
@@ -639,7 +850,7 @@ function PIBPreciosCorrientes(){
 
 function PIBPorcentaje(){
   mapaColombia('col-data3.csv');
-  document.getElementById('mapaActual').innerText = 'Mapa - PIB Por Porcentaje';
+  document.getElementById('mapaActual').innerText = 'Mapa - PIB Por Porcentaje (%)';
 }
 
 function PIBPerCapital(){
