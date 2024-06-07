@@ -199,3 +199,20 @@ body {
   text-align: center;
   margin-bottom: 10px; /* Espacio entre el subtítulo y la tabla */
 }
+
+/*titulo*/
+.title {
+  font-size: 2.5em;
+  font-weight: bold;
+  text-align: center;
+  color: #ffdd00; /* Color inicial */
+  animation: colorChange 3s infinite;
+  padding: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para mejorar la visibilidad */
+}
+
+@keyframes colorChange {
+  0% { color: #ffdd00; }
+  50% { color: #ff5555; }
+  100% { color: #ffdd00; }
+}
